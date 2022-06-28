@@ -1,0 +1,6 @@
+- pipeline.id: users
+  path.config: /usr/share/logstash/pipeline/user_sql.conf
+- pipeline.id: jeu-models
+  path.config: /usr/share/logstash/pipeline/jeu_sql.conf
+- pipeline.id: apache_logs
+  path.config: /usr/share/logstash/pipeline/apache_logs.conf

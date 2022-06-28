@@ -1,0 +1,81 @@
+PUT /jeu-models
+{
+  "mappings": {
+    "properties": {
+      "id": {"type": "keyword"},
+      "nom": {"type": "keyword"},
+      "created_at": {"type": "date"},
+      "updated_at": {"type": "date"},
+      "categorie_id": {"type": "integer"},
+      "editeur": {"type": "keyword"},
+      "annee": {"type": "integer"},
+      "update_date": {"type": "integer"}
+    }
+  }
+}
+
+
+PUT /users
+{
+  "mappings": {
+    "properties": {
+      "id": {"type": "keyword"},
+      "name": {"type": "keyword"},
+      "email": {"type": "keyword"},
+      "email_verified_at": {"type": "date" },
+      "password": {"type": "keyword"},
+      "remember_token": {"type": "keyword"},
+      "created_at": {"type": "date"},
+      "updated_at": {"type": "date"},
+      "role": {"type": "keyword"},
+      "address": {"type": "keyword"},
+      "update_date": {"type": "integer"}
+    }
+  }
+}
+
+
+PUT /apache-2022.06.20
+{
+  "settings": {
+    "index.mapping.coerce": false
+  }, 
+  "mappings": {
+        "dynamic": false,
+        "properties": {
+            "@timestamp": { "type": "date" },
+            "message": { "type": "text" },
+            "event.original": { "type": "keyword" },
+
+            "http.request.method": { "type": "keyword" },
+            "http.request.body.bytes": { "type": "keyword" },
+            "http.request.mime_type": { "type": "keyword" },
+
+            "http.response.body.bytes": { "type": "long" },
+            "http.response.status_code": { "type": "long" },
+
+            "http.version": { "type": "keyword" },
+            "http.method": { "type": "keyword" },
+
+            "referrer": { "type": "keyword" },
+
+            "url.path": { "type": "keyword" },
+            "url.port": { "type": "long" },
+            "url.domain": { "type": "keyword" },
+            "url.original": { "type": "keyword" },
+
+            "source.address": { "type": "keyword" },
+            "agent": { "type": "keyword" }, 
+            "user_agent.original": { "type": "text" },
+            "tags": { "type": "keyword" },
+
+            "ua.version": { "type": "keyword" },
+            "ua.os.full": { "type": "keyword" },
+            "ua.os.name": { "type": "keyword" },
+            "ua.device.name": { "type": "keyword" },
+            "ua.name": { "type": "keyword" },
+
+            "status": {"type": "keyword"}
+        }
+    }
+}
